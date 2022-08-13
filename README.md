@@ -1,4 +1,4 @@
-# MERN-CRUD-APP
+# node-crud-api
 
 In this project, I have created node CRUD application with express and mongodb and react.
 
