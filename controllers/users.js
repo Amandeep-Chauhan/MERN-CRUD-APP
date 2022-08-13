@@ -35,11 +35,11 @@ export const deleteUser = (req, res) => {
 export const updateUser = (req, res) => {
 	const { id } = req.params;
 
-	const user = users.filter((user) => user.id !== id);
+	const user = users.find((user) => user.id === id);
 
 	user.name = req.body.name;
-	user.contact = req.body.contact;
 	user.email = req.body.email;
+	user.contact = req.body.contact;
 
 	res.send("User updated successfully");
 };
