@@ -1,6 +1,6 @@
 import { v4 as uuid } from "uuid"
 
-const users = []
+let users = []
 
 //createuser
 export const createUser = (req, res) => {
@@ -27,7 +27,7 @@ export const getUser = (req, res) => {
 export const deleteUser = (req, res) => {
   const { id } = req.params
 
-  const user = users.filter((user) => user.id !== id)
+  users = users.filter((user) => user.id !== id)
   res.send("User deleted successfully")
 }
 
